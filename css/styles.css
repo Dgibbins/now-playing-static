@@ -205,7 +205,7 @@ the footer sections should be side by side rather than stacked, with a black bac
 Hint Now that you're making a responsive design, you'll need to tell the browser. Don't forget your <meta> viewport tag!
 */
 
-@media (min-width:769px) {
+@media (min-width:768px) {
   footer {
     position: relative;
     left: 120px;
@@ -228,11 +228,13 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
     top: 10%;
     right: 20%;
   }
-  .main {
+  main {
     float: none;
+    margin-left: 120px;
   }
   .movie {
     margin-left: 120px;
+    width: 100%;
   }
   .movie-details {
   }
@@ -252,5 +254,29 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
     color: white;
   }
 }
-@media (min-width:992px) {
+/*@media (min-width:769px) and (max-width:992px){
+}*/
+@media (min-width:993px) {
+  .movie {
+    width: 33%;
+    margin: 0px;
+    float: left;
+  }
+  .movie:first-of-type{
+    width:100%;
 }
+
+  .movie:not(:first-of-type) .movie-details {
+    display: none;
+  }
+
+/*.movie-details{
+  display: none;
+}*/
+/*.movie-details:not(:first-of-type) {
+  display:none;
+}*/
+}
+/*main:not(:first-child){
+  display:none;
+}*/
