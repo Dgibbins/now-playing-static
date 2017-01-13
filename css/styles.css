@@ -5,6 +5,7 @@ html {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   color: #333333;
+  background: black;
 }
 
 *,
@@ -194,4 +195,62 @@ figure {
 
 .about > p {
   margin: 0;
+}
+/*Once the device (or browser window) is wider than 768px,
+
+the navigation bar should move to be fixed to the left side of the window,
+the logo should be within the sidebar rather than floating on its own,
+the film overviews should be visible, and
+the footer sections should be side by side rather than stacked, with a black background and white text.
+Hint Now that you're making a responsive design, you'll need to tell the browser. Don't forget your <meta> viewport tag!
+*/
+
+@media (min-width:769px) {
+  footer {
+    position: relative;
+    left: 120px;
+  }
+  .site-logo {
+    z-index: 101;
+    position: fixed;
+  }
+  .site-nav {
+    height:100%;
+    float: left;
+    width: 120px;
+  }
+  .site-nav-item {
+    float: none; /*take off float; left to display vertical list*/
+    width: 100%
+  }
+  .site-nav-list {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+  }
+  .main {
+    float: none;
+  }
+  .movie {
+    margin-left: 120px;
+  }
+  .movie-details {
+  }
+  .about{
+    width: 50%;
+    float: right;
+    background: black;
+  }
+  .about > p{
+    display: inline;
+    margin: 0 5%;
+  }
+  .footer-nav {
+    float: left;
+    width: 50%;
+    background: black;
+    color: white;
+  }
+}
+@media (min-width:992px) {
 }
