@@ -206,6 +206,10 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
 */
 
 @media (min-width:768px) {
+  main {
+    float: none;
+    margin-left: 120px;
+  }
   footer {
     position: relative;
     left: 120px;
@@ -213,30 +217,18 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
   }
   .site-logo {
     z-index: 101;
-    position: fixed;
   }
   .site-nav {
     height:100%;
-    float: left;
     width: 120px;
-  }
-  .site-nav-item {
-    float: none; /*take off float; left to display vertical list*/
-    width: 100%
   }
   .site-nav-list {
     position: absolute;
     top: 10%;
-    right: 20%;
+    right: 4%;
   }
-  main {
-    float: none;
-    margin-left: 120px;
-  }
-  .movie {
-    width: 100%;
-  }
-  .movie-details {
+  .site-nav-item {
+    width: 100%
   }
   .about{
     width: 50%;
@@ -246,6 +238,8 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
   .about > p{
     display: inline;
     margin: 0 5%;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .footer-nav {
     float: left;
@@ -264,14 +258,12 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
   .movie:first-of-type{
     width:100%;
 }
-  .movie:not(:first-of-type) .movie-backdrop {
+  .movie:not(:first-of-type) .movie-backdrop,
+  .movie:not(:first-of-type) .movie-details  {
     display: none;
   }
   .movie:not(:first-of-type) .movie-poster{
     display: inline;
-  }
-  .movie:not(:first-of-type) .movie-details {
-    display: none;
   }
 
 }
