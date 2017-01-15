@@ -209,6 +209,7 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
   footer {
     position: relative;
     left: 120px;
+    clear: both;
   }
   .site-logo {
     z-index: 101;
@@ -233,7 +234,6 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
     margin-left: 120px;
   }
   .movie {
-    margin-left: 120px;
     width: 100%;
   }
   .movie-details {
@@ -254,8 +254,7 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
     color: white;
   }
 }
-/*@media (min-width:769px) and (max-width:992px){
-}*/
+
 @media (min-width:993px) {
   .movie {
     width: 33%;
@@ -265,18 +264,14 @@ Hint Now that you're making a responsive design, you'll need to tell the browser
   .movie:first-of-type{
     width:100%;
 }
-
+  .movie:not(:first-of-type) .movie-backdrop {
+    display: none;
+  }
+  .movie:not(:first-of-type) .movie-poster{
+    display: inline;
+  }
   .movie:not(:first-of-type) .movie-details {
     display: none;
   }
 
-/*.movie-details{
-  display: none;
-}*/
-/*.movie-details:not(:first-of-type) {
-  display:none;
-}*/
 }
-/*main:not(:first-child){
-  display:none;
-}*/
